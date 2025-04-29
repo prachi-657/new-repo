@@ -1,0 +1,24 @@
+name: Welcome New Contributors
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Welcome message
+        run: echo "🎉 Welcome to the project! Thanks for your contribution."
+
+      - name: Guidance for next steps
+        run: |
+          echo "✅ You’ve successfully triggered the workflow."
+          echo "🛠️ Add more actions to test, build, or deploy your project here."
